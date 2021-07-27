@@ -29,7 +29,7 @@ namespace apsp {
             __syncthreads();
 
             for (size_t k = 0; k < BS; k++) {
-                if (res > sm1[ti][k] + sm2[k][tj]) { res = sm1[ti][k] + sm2[k][tj]; }
+                if (sm1[ti][k] + sm2[k][tj] < res) { res = sm1[ti][k] + sm2[k][tj]; }
             }
 
             __syncthreads();
