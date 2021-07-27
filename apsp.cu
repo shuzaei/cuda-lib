@@ -85,7 +85,6 @@ namespace apsp {
         }
     };
 
-#undef N
 #undef BS
 #undef inf
 }; // namespace apsp
